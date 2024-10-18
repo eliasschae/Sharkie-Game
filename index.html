@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/orientation.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="models/drawable-object.class.js"></script>
+    <script src="models/movable-object.class.js"></script>
+    <script src="models/character.class.js"></script>
+    <script src="models/fish.class.js"></script>
+    <script src="models/jellyfish.class.js"></script>
+    <script src="models/jellyfishyellow.class.js"></script>
+    <script src="models/pufferfish.class.js"></script>
+    <script src="models/bubble-bottle.class.js"></script>
+    <script src="models/coin.class.js"></script>
+    <script src="models/status-bar.class.js"></script>
+    <script src="models/coin-bar.class.js"></script>
+    <script src="models/bubble-bar.class.js"></script>
+    <script src="models/bossBar.class.js"></script>
+    <script src="models/world.class.js"></script>
+    <script src="models/background-object.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/throwable-object.class.js"></script>
+    <script src="models/endboss.class.js"></script>
+    <script src="levels/level1.js"></script>
+    <script src="js/game.js"></script>
+    <link rel="icon" href="img/icon.jpg" />
+    <title>Sharkie</title>
+</head>
+
+<body>
+    <div id="orientation-overlay">
+        <img src="img/Design ohne Titel (22).png" alt="Rotate your device">
+    </div>
+
+    <html translate="no">
+
+    </html>
+    <img id="game-title" src="img/SHARKIE-8-7-2024.png">
+    <img class="mutebutton" id="mutebutton" src="img/soundimg1.png">
+    <div id="home-screen">
+        <img id="start-button" src="img/6.Botones/Start/1.png" alt="Start Game" class="start-button"
+            onclick="startGame()">
+        <div class="controlsdiv">
+            <button id="controls-button">CONTROLS</button>
+        </div>
+        <button id="music-button">MUSIC ON</button>
+        <button id="imprint-button">IMPRINT</button>
+
+        <div id="controls-image-container" class="hidden">
+            <button id="close-button">X</button>
+            <img src="img/ATTACK.png" alt="Controls" id="controls-image">
+        </div>
+    </div>
+
+    <div id="overlay">
+        <img id="overlay-img" src="img\6.Botones\Tittles\You win\Mesa de trabajo 1.png" alt="Endboss Dead">
+    </div>
+    <div id="overlay">
+        <img src="img\Screenshot 2024-09-16 152254.png" alt="Game Over">
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="canvas" width="720" height="480"></canvas>
+        <div id="mobile-controls">
+            <button id="up" onclick="moveUp()">↑</button>
+            <div id="left-right">
+                <button id="left" onclick="moveLeft()">←</button>
+                <button id="right" onclick="moveRight()">→</button>
+            </div>
+            <button id="down" onclick="moveDown()">↓</button>
+            <div class="bubblediv">
+                <button id="bubble" onclick="triggerBubble()">
+                    <img id="imgbubblebutton" src="img/4.Attack/Bubble trap/Poisoned Bubble (for whale).png">
+                </button>
+            </div>
+            <div class="finslapdiv">
+                <button id="finslap" onclick="triggerslap()">💥</button>
+            </div>
+        </div>
+
+
+        <div id="death-overlay" class="death-overlay hidden">
+            <img src="img/Screenshot 2024-09-16 152254.png" alt="Dead" class="death-image">
+        </div>
+        <img class="winScrenns d-none" id="winScrenns" src="img/6.Botones/Tittles/You win/Mesa de trabajo 1.png">
+    </div>
+
+
+    <audio id="background-music" src="audio/cave-of-light-13566.mp3" loop></audio>
+
+    <div id="imprint-overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <span id="close-imprint-button" class="close-button">&times;</span>
+            <h1 class="imprint-h1">Impressum</h1>
+
+            <p>Elias Sch&auml;fer<br />
+                Donauhalde 15<br />
+                89079 Ulm Deutschland</p>
+
+            <h2>Kontakt</h2>
+            <p>Telefon: +595 994 856125<br />
+                E-Mail: elias-schaefer1@web.de</p>
+
+            <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
